@@ -1,6 +1,6 @@
 # LiveKit Server
 
-pfMCP server implementation for managing **LiveKit** rooms, participants, and access tokens.
+pfMCP server implementation for managing **LiveKit** rooms, participants, access tokens, ingress, and egress.
 
 ---
 
@@ -22,7 +22,7 @@ pfMCP server implementation for managing **LiveKit** rooms, participants, and ac
 
 ---
 
-### Supported Tools (Phase 1)
+### Supported Tools (Phase 1 & 2)
 
 | Tool | Description |
 |------|-------------|
@@ -36,6 +36,19 @@ pfMCP server implementation for managing **LiveKit** rooms, participants, and ac
 | `remove_participant` | Remove a participant from a room |
 | `mute_participant_track` | Mute or unmute a participant's track |
 | `update_room_metadata` | Update metadata for a LiveKit room |
+| `start_ingress` | Create a new LiveKit ingress |
+| `list_ingress` | List all LiveKit ingresses |
+| `start_room_composite_egress` | Start recording a room composite egress to file or stream |
+| `list_egress` | List all LiveKit egresses |
+| `stop_egress` | Stop a LiveKit egress |
+| `delete_ingress` | Delete a LiveKit ingress |
+| `update_layout` | Update the layout of an active room composite egress |
+| `update_ingress` | Update an existing LiveKit ingress |
+| `start_web_egress` | Start recording a web page URL to file or stream |
+| `start_participant_egress` | Start recording a specific participant in a room to file or stream |
+| `start_track_composite_egress` | Start recording a track composite egress to file or stream |
+| `start_track_egress` | Start recording a specific track to file or websocket |
+| `update_stream` | Add or remove stream URLs from an active egress |
 
 ---
 
@@ -65,8 +78,6 @@ python src/servers/local.py --server=livekit
 
 ### Upcoming Tools
 
-- **Ingress** — Start, list, update, and delete media ingress
-- **Egress** — Room composite, participant, track, and web egress
 - **Webhooks** — Webhook event validation and processing
 - **Data APIs** — Send data, publish text/bytes/RPC to rooms
 - **Agent Dispatch** — Create, list, and delete agent dispatches
