@@ -194,6 +194,10 @@ jsonschema-specifications==2025.9.1
     # via jsonschema
 libipld==3.0.1
     # via atproto
+livekit-api==1.1.0
+    # via -r requirements.in
+livekit-protocol==1.1.13
+    # via livekit-api
 lxml==5.3.2
     # via
     #   python-docx
@@ -375,6 +379,10 @@ tomlkit==0.13.2
     # via snowflake-connector-python
 twilio==9.5.2
     # via -r requirements.in
+types-protobuf==7.34.1.20260518
+    # via
+    #   livekit-api
+    #   livekit-protocol
 typing-extensions==4.13.0
     # via
     #   anthropic

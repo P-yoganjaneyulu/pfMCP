@@ -35,7 +35,7 @@ def pytest_collection_modifyitems(items: List[pytest.Item]):
     for item in items:
         if (
             item.get_closest_marker("asyncio") is None
-            and "async def" in item.function.__code__.co_code
+            and b"async def" in item.function.__code__.co_code
         ):
             item.add_marker(pytest.mark.asyncio)
 

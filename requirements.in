@@ -30,6 +30,7 @@ python-docx
 mailchimp_marketing
 mailerlite
 atproto
+livekit-api
 httpcore>=1.0.9
 h11>=0.16.0
 google-analytics-data
